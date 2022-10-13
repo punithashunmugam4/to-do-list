@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+.to-do-app{
+box-sizing: border-box;
+width: 500px;
+margin:50px auto 0 auto ;
+text-align: center;
+border-radius: 5px;
+box-shadow: 0 0 5px #252525;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  background-color: #6d6a6a;
+  padding: 7px;
+  border-radius: 3px 3px 0 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header h1{
+  font-size: 35px;
+  font-weight: lighter;
   color: white;
+  margin: 0;  
 }
-
-.App-link {
-  color: #61dafb;
+.create-new{
+  border-top: 1px solid #777;
+  width: 100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.create-new input{
+  width: 75%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 19px;
+  border: none;
+}
+.create-new button{
+  width: 25%;
+  background-color: #eee;
+  box-sizing: border-box;
+  padding:10px;
+  border: none;
+  margin: 0;
+  font-size: 18px;
+  border-left: 1px solid #999;
+}
+.create-new button:hover{
+  background-color: #ddd;
+}
+.items-list{
+background-color: #138796;
+border-radius: 3px;
+}
+.to-do-item{
+  padding: 10px 0 10px 0;
+  margin: 1px 0 1px 0;
+  border-top: 1px solid #03863b;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  color:white;
+  font-weight: lighter;
+}
+.name{
+  margin-left: 10px;
+}
+.action{
+  margin-right: 10px;
+}
+.action button{
+  padding: 7px;
+  border-radius: 3px;
+  border: none;
+  background-color: #333;
+  color: white;
+  font-weight: lighter;
+  width: 80px;
 }
