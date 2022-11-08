@@ -4,7 +4,7 @@ import Header from './components/Header';
 import CreateNew from './components/CreateNew';
 import ItemList from './components/ItemList';
 
-console.log("i love");
+// console.log("i love");
 function App() {
   const [tasks,setTask]=useState([
     {
@@ -55,11 +55,29 @@ const handleDoubleClick=(id)=>{
   })
   setTask(newTaskList)
 }
+const [editableId,setEditableId]=useState("")
+const handleEditing=(id)=>{
+  console.log(id)
+  document.getElementById(id).focus()
+  setEditableId(id)
+  // document.getElementById(id).contentEditable=true
+  // document.getElementById(`edit${id}`).style.display='inline'
+
+  // document.getElementById(`edit${id}`).addEventListener('click',()=>{
+  //   const edited= document.getElementById(id).innerText
+  //   console.log(edited)
+  //   setEditableId("")
+    // document.getElementById(id).contentEditable=false
+    // document.getElementById(`edit${id}`).style.display='none'
+  // })
+}
+// console.log(editableId)
   return (
     <div className="to-do-app">
       <Header/>
       <CreateNew createNewTask={createNewTask} handleChange={handleChange} taskInp={taskInp}/>
-      <ItemList tasks={tasks} handleDoubleClick={handleDoubleClick} handleDelete={handleDelete}/>
+      <ItemList tasks={tasks} handleDoubleClick={handleDoubleClick}
+      handleEditing={handleEditing} setEditableId={setEditableId} editableId={editableId}  handleDelete={handleDelete}/>
     </div>
   )
 }
